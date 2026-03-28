@@ -1,0 +1,86 @@
+/* スライダーのサイズを調整（重要） */
+/* Swiperのサイズ調整 */
+.swiper {
+  width: 100%;
+}
+
+/* すべてのスライドを少し薄くし、小さくする（任意） */
+.swiper-slide {
+  opacity: 0.4; /* 薄さの度合い（0〜1） */
+  transition: 0.3s; /* 変化をなめらかに */
+  transform: scale(0.9); /* 少し小さくしておくと、真ん中が際立ちます */
+}
+
+/* 真ん中に来たスライドだけ、濃く・大きくする */
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1); /* 元のサイズに戻す */
+}
+
+/* 画像の表示設定（前回のまま） */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+.swiper-button-prev {
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+
+.swiper-button-next {
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+
+.swiper-text h3 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.swiper-text p {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title h1 {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 5rem;
+  margin: 2rem 1rem;
+}
+
+#loading {
+  transition: all 2s;
+  background-color: #ddd;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.spinner {
+  width: 15rem;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
